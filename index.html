@@ -3,11 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Student Management</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h1>
-        Deploy successfully
-    </h1>
+<body class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto p-4">
+        <header class="mb-6">
+            <h1 class="text-4xl font-bold text-center">Student Management</h1>
+        </header>
+
+        <section class="mb-6">
+            <h2 class="text-2xl font-semibold mb-4">Student List</h2>
+            <table class="min-w-full bg-white rounded-lg shadow">
+                <thead>
+                    <tr>
+                        <th class="py-2 px-4 border-b">ID</th>
+                        <th class="py-2 px-4 border-b">Name</th>
+                        <th class="py-2 px-4 border-b">Age</th>
+                        <th class="py-2 px-4 border-b">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="py-2 px-4 border-b">1</td>
+                        <td class="py-2 px-4 border-b">John Doe</td>
+                        <td class="py-2 px-4 border-b">20</td>
+                        <td class="py-2 px-4 border-b">
+                            <button class="bg-blue-500 text-white px-2 py-1 rounded">Edit</button>
+                            <button class="bg-red-500 text-white px-2 py-1 rounded">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more student rows as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-4">Add New Student</h2>
+            <form class="bg-white p-6 rounded-lg shadow">
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700" for="studentId">Student ID</label>
+                    <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" type="text" id="studentId" placeholder="Enter student ID">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700" for="studentName">Name</label>
+                    <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" type="text" id="studentName" placeholder="Enter student name">
+                </div>
+                <div class="mb-4">
+                    <label class="block text-sm font-medium text-gray-700" for="studentAge">Age</label>
+                    <input class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" type="number" id="studentAge" placeholder="Enter student age">
+                </div>
+                <button class="bg-green-500 text-white px-4 py-2 rounded">Add Student</button>
+            </form>
+        </section>
+    </div>
 </body>
 </html>
